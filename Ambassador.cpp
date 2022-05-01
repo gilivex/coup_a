@@ -3,20 +3,18 @@
 #include <string>
 #include "Ambassador.hpp"
 
+
 using namespace std;
+using namespace coup;
 namespace coup
 {
     
-    Ambassador Ambassador : (Game game, string name) : Player(game, name)
+    Ambassador& Ambassador::transfer(Player p1, Player p2)
     {
+        return *this;
     }
-
-    void Ambassador::transfer()
+    Ambassador& Ambassador::block(Player)
     {
+        return *this;
     }
-    void Ambassador::block()
-    {
-    }
-
-}
-}
+};

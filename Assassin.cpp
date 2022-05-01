@@ -1,20 +1,16 @@
 #include <iostream>
 #include <string>
-#include <Assassin.hpp>
-#include <Player.hpp>
+#include "Assassin.hpp"
+#include "Player.hpp"
 #include <stdexcept>
 
 using namespace std;
-
+using namespace coup;
 namespace coup
 {
-    
-    Assassin Assassin :(Game game, string name) : Player(game, name)
-    {
+
+
+    Assassin& Assassin::coup(Player p1) {
+        return *this;
     }
-
-    void Assassin::coup(Player p1) {
-        this-> player_coins -= 3;
-
-    };
-}
+};

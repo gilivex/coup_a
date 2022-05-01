@@ -9,8 +9,9 @@ namespace coup
     class Duke : public Player
     {
     public:
-        Duke(Game, string);
-        void tax();
-        void block(Player);
+        Duke(Game &game, string name): Player(game,name,"Duke"){};
+        ~Duke(){};
+        Duke& tax();
+        Duke& block(Player);
     };
 }

@@ -9,8 +9,9 @@ namespace coup{
     class Ambassador : public Player
     {
        public:
-       Ambassador(Game ,string);
-        void transfer(Player p1, Player p2);
-        void block(Player);
+       Ambassador(Game & game,string name): Player(game,name,"Ambassador"){};
+        ~Ambassador(){};
+        Ambassador& transfer(Player p1, Player p2);
+        Ambassador& block(Player);
     };
 }

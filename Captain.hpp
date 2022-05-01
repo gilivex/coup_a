@@ -11,8 +11,9 @@ namespace coup
     {
 
     public:
-        Captain(Game, string);
-        void steal(Player);
-        void block(Player);
+        Captain(Game & game,string name): Player(game,name,"Captain"){};
+        ~Captain(){};
+        Captain& steal(Player p1);
+        Captain& block(Player p1);
     };
 }

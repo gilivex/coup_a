@@ -10,7 +10,8 @@ namespace coup
     class Contessa : public Player
     {
     public:
-        Contessa(Game, string);
-        void block(Player);
+        Contessa(Game &game, string name): Player(game,name,"Contessa"){};
+        ~Contessa(){};
+        Contessa& block(Player&);
     };
 }

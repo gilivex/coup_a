@@ -6,13 +6,13 @@
 using namespace std;
 namespace coup
 {
-    Duke Duke : (Game game, string name) : Player(game, name)
+
+    Duke& Duke::tax()
     {
+        return *this;
     }
-    void Duke::tax()
+    Duke& Duke::block(Player)
     {
-    }
-    void Duck::block(Player)
-    {
+        return *this;
     }
 };

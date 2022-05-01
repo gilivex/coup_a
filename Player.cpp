@@ -4,35 +4,36 @@
 #include "Player.hpp"
 
 using namespace std;
-
+using namespace coup;
 namespace coup
 {
 
-  Player::Player(Game game, string name): game,name(game,name)
-  {
-  }
 
   string Player::role()
   {
     return " this player role is: ";
   }
 
-  void Player::income()
+  Player& Player::income()
   {
-    player_coins++;
+       player_coins++;
+      return *this;
   }
 
-  void Player::foreign_aid()
+  Player& Player::foreign_aid()
   {
     player_coins += 2;
-  }
-  
-  void Player::coup(Player)
-  {
+      return *this;
   }
 
-  void Player::block()
+  Player& Player::coup(Player*)
   {
+      return *this;
+  }
+
+  Player& Player::block()
+  {
+    throw runtime_error("you cannot do this action");
   }
 
   int Player::coins()

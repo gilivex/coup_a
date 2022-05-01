@@ -11,7 +11,8 @@ namespace coup
     class Assassin : public Player
     {
         public:
-        Assassin(Game, string);
-        void coup(Player);
+        Assassin(Game & game,string name): Player(game,name,"Assassin"){};
+        ~Assassin(){};
+        Assassin& coup(Player);
     };
 }

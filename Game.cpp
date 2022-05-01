@@ -3,17 +3,20 @@
 #include <vector>
 #include <iostream>
 using namespace std;
+using namespace coup;
 
-namespace coup{
-    Game::Game(){
-    } 
     vector<string> Game::players(){
-        return this->players();
+        vector <string> Players_names;
+        return Players_names;
     }
     string Game::turn(){
         return "player turn is:";
     }
+    Game& Game::add_player(Player *new_Player){
+        livePlayers.push_back(new_Player);
+        return *this;
+           }
+    string Game::winner(){
+        return "the winner is: ";
+    }
 
-
-
-}

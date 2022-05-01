@@ -5,14 +5,19 @@
 using namespace std;
 namespace coup
 {
+    class Player;
     class Game
     {
     private:
-        string winner();
+        vector<Player*> livePlayers;
 
     public:
-        Game(); 
+        Game(){};
+        ~Game(){};
         vector<string> players();
+        Game& add_player(Player *new_Player);
         string turn();
+        string winner();
+
     };
-}
+};

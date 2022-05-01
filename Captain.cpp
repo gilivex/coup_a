@@ -1,18 +1,17 @@
 #include <iostream>
 #include <string>
 #include "Game.hpp"
-#include "Captin.hpp"
+#include "Captain.hpp"
 
 using namespace std;
+using namespace coup;
 namespace coup
-{
-    Captain Captain : (Game game , string name) : Player (game , name)
-    {
-    }
-    void Captain:: steal(){
 
+{
+    Captain& Captain::steal(Player p1){
+        return *this;
     }
-    void Captain:: block(){
-        
+    Captain& Captain::block(Player p1){
+        return *this;
     }
-}
+};

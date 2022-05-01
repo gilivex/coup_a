@@ -4,13 +4,11 @@
 #include "Contessa.hpp"
 
 using namespace std;
+using namespace coup;
 namespace coup
 {
-    Contessa Contessa : (Game game, string name) : Player(game, name)
+    Contessa& Contessa::block(Player& p1)
     {
+        return *this;
     }
-    void Contessa::block()
-    {
-    }
-
-}
+};
